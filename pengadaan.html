@@ -2,20 +2,24 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pengadaan Bahan</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+<!-- BACK BUTTON -->
 <a href="index.html" class="back-btn">← Kembali</a>
-<h1>Pengadaan Bahan</h1>
-<input type="text" id="search" class="search-box" placeholder="Cari bahan...">
-<div class="container">
 
-<div class="topbar">
-  <a href="index.html">← Menu</a>
-  <h2>Pengadaan</h2>
+<!-- HEADER -->
+<div class="page-header">
+<h1>Pengadaan Bahan</h1>
 </div>
+
+<!-- SEARCH -->
+<input type="text" id="search" class="search-box" placeholder="Cari bahan...">
+  
+<div class="container">
   
 <div class="item">
 <label>Ayam</label>
@@ -162,13 +166,10 @@
 </div>
 
 <!-- tombol -->
-<button onclick="kirimPengadaan()">
-Simpan Pengadaan
-</button>
+<button onclick="kirimPengadaan()">Simpan Pengadaan</button>
 
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
