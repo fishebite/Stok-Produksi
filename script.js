@@ -22,59 +22,22 @@ const bahan = [
 function kirimPengadaan(){
   let data = { sheet: "Pengadaan Bahan" };
 
-  bahan.forEach(item => {
-    data[item+"_qty"] = document.getElementById(item+"_qty")?.value || 0;
-    data[item+"_harga"] = document.getElementById(item+"_harga")?.value || 0;
+  bahan.forEach(b => {
+    data[b+"_qty"] = document.getElementById(b+"_qty")?.value || 0;
+    data[b+"_harga"] = document.getElementById(b+"_harga")?.value || 0;
   });
 
-  fetch(url, {
-    method: "POST",
-    body: new URLSearchParams(data)
-  })
-  .then(res => res.text())
-  .then(res => alert(res))
-  .catch(err => alert("Error: " + err));
+  fetch(url,{method:"POST",body:new URLSearchParams(data)})
+  .then(r=>r.text()).then(alert);
 }
 
-// =======================
-// PENGGUNAAN
-// =======================
 function kirimPenggunaan(){
   let data = { sheet: "Penggunaan Bahan" };
 
-  bahan.forEach(item => {
-    data[item] = document.getElementById(item)?.value || 0;
+  bahan.forEach(b => {
+    data[b] = document.getElementById(b)?.value || 0;
   });
 
-  fetch(url, {
-    method: "POST",
-    body: new URLSearchParams(data)
-  })
-  .then(res => res.text())
-  .then(res => alert(res))
-  .catch(err => alert("Error: " + err));
+  fetch(url,{method:"POST",body:new URLSearchParams(data)})
+  .then(r=>r.text()).then(alert);
 }
-
-// =======================
-// SEARCH FILTER (HARUS DI LUAR)
-// =======================
-function filterBahan(keyword) {
-  let items = document.querySelectorAll(".item");
-
-  items.forEach(item => {
-    let text = item.innerText.toLowerCase();
-    item.style.display = text.includes(keyword.toLowerCase()) ? "flex" : "none";
-  });
-}
-
-// =======================
-// EVENT LISTENER SEARCH
-// =======================
-document.addEventListener("DOMContentLoaded", function(){
-  const search = document.getElementById("search");
-  if(search){
-    search.addEventListener("keyup", function(){
-      filterBahan(this.value);
-    });
-  }
-});
