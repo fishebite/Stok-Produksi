@@ -24,7 +24,6 @@ function kirimPengadaan(){
 
   bahan.forEach(item => {
     data[item+"_qty"] = document.getElementById(item+"_qty")?.value || 0;
-    data[item+"_harga"] = document.getElementById(item+"_harga")?.value || 0;
   });
 
   fetch(url, {
