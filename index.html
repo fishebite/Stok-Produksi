@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <!-- BARIS DI BAWAH INI WAJIB ADA agar tidak kecil di HP -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Utama - Responsive Game Style</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1a1a2e;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu-container {
+            text-align: center;
+            width: 90%; /* Supaya gak mentok pinggir di HP */
+        }
+
+        h1 {
+            font-size: clamp(2rem, 8vw, 3.5rem); /* Ukuran teks fleksibel */
+            margin-bottom: 40px;
+            text-shadow: 0 0 10px #00d4ff;
+        }
+
+        .options {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap; /* BIAR BISA PINDAH KE BAWAH KALAU GAK MUAT */
+        }
+
+        .card {
+            /* Menggunakan width fleksibel */
+            width: 100%; 
+            max-width: 280px; 
+            padding: 50px 20px;
+            background: #16213e;
+            border: 3px solid #0f3460;
+            border-radius: 15px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            box-sizing: border-box; /* Biar padding gak ngerusak ukuran */
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            background: #e94560;
+            box-shadow: 0 0 30px #e94560;
+        }
+
+        /* --- KEY POINT: KHUSUS TAMPILAN HP --- */
+        @media (max-width: 600px) {
+            .options {
+                flex-direction: column; /* Tombol jadi susun ke bawah */
+                align-items: center;
+            }
+            
+            .card {
+                width: 100%; /* Tombol jadi lebar penuh di layar HP */
+                padding: 30px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu-container">
+        <h1>PILIH MODE</h1>
+
+        <div class="options">
+            <a href="pengadaan.html" class="card">PENGADAAN</a>
+            <a href="penggunaan.html" class="card">PENGGUNAAN</a>
+        </div>
+    </div>
+
+</body>
+</html>
