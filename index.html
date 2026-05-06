@@ -50,6 +50,11 @@
             transition: all 0.3s ease;
             box-shadow: 0 10px 20px rgba(0,0,0,0.5);
             box-sizing: border-box; /* Biar padding gak ngerusak ukuran */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 120px;
+            font-size: 1.2rem;
         }
 
         .card:hover {
@@ -68,6 +73,9 @@
             .card {
                 width: 100%; /* Tombol jadi lebar penuh di layar HP */
                 padding: 30px 10px;
+            }
+            .card:active {
+                transform: scale(0.97);
             }
         }
     </style>
