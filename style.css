@@ -91,6 +91,19 @@ h1 {
   overflow-y: auto;
 }
 
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.topbar a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
 /* SCROLLBAR */
 .container::-webkit-scrollbar {
   width: 6px;
