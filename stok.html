@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stok Bahan</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="index.html" class="back-btn">← Back</a>
+
+<h2>Stok Bahan</h2>
+
+<div class="container" id="stok"></div>
+
+<script>
+const url = "https://script.google.com/macros/s/AKfycbxTOjTpLaDrGAHeWEmtTEFj2mFiAEBHT4NI8ecaL1Ej5jsKEh_9Oenm6QZlvuP3Stfo/exec";
+
+fetch(url)
+.then(r => r.json())
+.then(data => {
+
+  let html = "";
+
+  data.forEach(d => {
+    html += `
+      <div class="item">
+        <label>${d.bahan}</label>
+        <input value="${d.stok}" disabled>
+      </div>
+    `;
+  });
+
+  document.getElementById("stok").innerHTML = html;
+});
+</script>
+
+</body>
+</html>
