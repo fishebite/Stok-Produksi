@@ -66,4 +66,72 @@ button {
   .item input {
     width: 100%;
   }
+}body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0f172a;
+  color: white;
+  padding: 10px;
+}
+
+/* BACK BUTTON */
+.back-btn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+/* ITEM */
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 5px 0;
+  background: #1e293b;
+  border-radius: 8px;
+}
+
+.item input {
+  width: 80px;
+}
+
+/* SEARCH */
+.search-box {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* BUTTON */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+  .item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .item input {
+    width: 100%;
+  }
 }
