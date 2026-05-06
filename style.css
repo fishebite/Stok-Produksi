@@ -212,15 +212,36 @@ button:hover {
   }
 }
 
+.back-btn {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  background: rgba(255,255,255,0.08);
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: rgba(99,102,241,0.3);
+}
+
 /* --- KEY POINT: KHUSUS TAMPILAN HP --- */
 @media (max-width: 600px) {
-.options {
-    flex-direction: column; /* Tombol jadi susun ke bawah */
-    align-items: center;
+  .item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6px;
   }
-            
-    .card {
-    width: 100%; /* Tombol jadi lebar penuh di layar HP */
-    padding: 30px 10px;
+
+  label {
+    min-width: auto;
+    font-size: 13px;
+  }
+
+  .item input {
+    width: 100%;
+    margin-left: 0;
   }
 }
